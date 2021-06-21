@@ -2,7 +2,6 @@ package com.codecool.simplecalculator;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -12,37 +11,45 @@ public class SimpleCalculatorTest {
 
     @Test
     public void testIsNumberValid() {
-        // test isNumber method with the value: 11
+        assertNotNull(SimpleCalculator.isNumber("2"));
     }
 
     @Test
     public void testIsNumberNotValid() {
-        // test isNumber method with the value: "xyz"
+        assertNull(SimpleCalculator.isNumber("x"));
     }
 
     @Test
     public void testIsValidOperatorValid() {
-        // test isValidOperator method with the value: "*"
+        assertTrue(SimpleCalculator.isValidOperator("+"));
     }
 
     @Test
     public void testCalcPlus() {
-        // test addition using the calc method with the values: "+", 5, 7
+        float a = 3;
+        float b = 4;
+        assertEquals((Float)(a + b), SimpleCalculator.calc("+", a, b));
     }
 
     @Test
     public void testCalcMinus() {
-        // test subtraction using the calc method with the values: "-", 5, 7
+        float a = 3;
+        float b = 4;
+        assertEquals((Float)(a - b), SimpleCalculator.calc("-", a, b));
     }
 
     @Test
     public void testCalcMultiply() {
-        // test multiplication using the calc method with the values: "*", 5, 7
+        float a = 3;
+        float b = 4;
+        assertEquals((Float)(a * b), SimpleCalculator.calc("*", a, b));
     }
 
     @Test
     public void testCalcDivision() {
-        // test division using the calc method with the values: "/", 5, 7
+        float a = 3;
+        float b = 4;
+        assertEquals((Float)(a / b), SimpleCalculator.calc("/", a, b));
     }
 
 }
