@@ -2,6 +2,8 @@ package com.codecool.simplecalculator;
 
 import java.util.Scanner;
 
+// just doing this commit so github actions run
+
 public class SimpleCalculator {
 
     public static void main(String[] args) {
