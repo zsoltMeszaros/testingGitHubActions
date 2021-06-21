@@ -2,7 +2,7 @@ package com.codecool.simplecalculator;
 
 import java.util.Scanner;
 
-// just doing this commit so github actions run
+// just doing this commit so github actions run 2.0
 
 public class SimpleCalculator {
 
